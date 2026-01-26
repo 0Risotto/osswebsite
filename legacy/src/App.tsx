@@ -1,7 +1,6 @@
 import { ThemeProvider } from "./components/theme-provider";
-import AboutPage from "./features/components/about/AboutPage";
-import { AboutSection } from "./features/components/about/AboutSection";
-import { Hero } from "./features/components/Hero";
+import AboutPage from "./main/about/AboutPage";
+import { Hero } from "./main/hero/Hero";
 
 export function App() {
   return (

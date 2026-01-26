@@ -85,20 +85,7 @@ export function AboutSection({ className = "" }: { className?: string }): JSX.El
         </motion.div>
       </div>
 
-      {/* Optional: Animated Background Pattern */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1.5 }}
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 25px 25px, rgba(255,255,255,0.2) 2px, transparent 2px),
-            radial-gradient(circle at 75px 75px, rgba(255,255,255,0.15) 2px, transparent 2px)
-          `,
-          backgroundSize: '100px 100px',
-        }}
-      />
+    
     </section>
   );
 }

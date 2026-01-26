@@ -21,13 +21,13 @@ export function HeroStats() {
       transition={{ delay: 1.2 }}
     >
       {STATS.map((s, i) => (
-        <motion.div 
-          key={i} 
+        <motion.div
+          key={i}
           whileHover={{ scale: 1.1 }}
           style={{ textAlign: "center" }}
         >
           <div style={{ fontSize: "1.8rem", fontWeight: "bold" }}>
-            {(s.label === "Projects" || s.label === "Active Members") ? (
+            {s.label === "Projects" || s.label === "Active Members" ? (
               <CountUp
                 from={0}
                 to={Number(s.value)}
@@ -38,9 +38,7 @@ export function HeroStats() {
               <span>{s.value}</span>
             )}
           </div>
-          <div style={{ fontSize: "0.9rem", opacity: 0.7 }}>
-            {s.label}
-          </div>
+          <div style={{ fontSize: "0.9rem", opacity: 0.7 }}>{s.label}</div>
         </motion.div>
       ))}
     </motion.div>

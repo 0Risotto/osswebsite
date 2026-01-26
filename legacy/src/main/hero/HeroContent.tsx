@@ -2,7 +2,6 @@ import { useState } from "react";
 import BlurText from "@/components/BlurText";
 import TextType from "@/components/TextType";
 import { TYPING_TEXT } from "./hero.constants";
-import ScrambledText from "@/components/ScrambledText";
 
 export function HeroContent() {
   const [loaded, setLoaded] = useState(false);
@@ -49,9 +48,6 @@ export function HeroContent() {
             showCursor
             style={{ fontSize: "clamp(0.5rem, 5vw, 2rem)" }}
           />
-        
-        
-        
         
         
         
