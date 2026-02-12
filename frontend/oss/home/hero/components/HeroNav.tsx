@@ -1,4 +1,3 @@
-
 'use client';
 
 import StaggeredMenu from "@/components/ui/StaggeredMenu";
@@ -29,7 +28,8 @@ export function HeroNav() {
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: 1000
+        zIndex: 1000,
+        pointerEvents: "none" // Keep this: allows clicks to pass through the empty areas
       }}
     >
       <StaggeredMenu
@@ -43,10 +43,11 @@ export function HeroNav() {
         changeMenuColorOnOpen={true}
         colors={['#B19EEF', '#5227FF']}
         accentColor="#8ff0a4"
+        // 1. ADD THIS: A valid image prevents the layout crash
+        logoSrc="/favicon.ico" 
         onMenuOpen={() => console.log('Menu opened')}
         onMenuClose={() => console.log('Menu closed')}
       />
     </motion.div>
   );
 }
-

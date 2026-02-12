@@ -7,6 +7,7 @@ export function Hero() {
     <div
       style={{
         height: "100vh",
+        position: "relative",
         fontFamily: "system-ui, -apple-system, sans-serif",
       }}
     >
