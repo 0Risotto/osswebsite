@@ -42,7 +42,8 @@
 
 .sm-logo-img {
   display: block;
-  height: 32px;
+  height: 64px;
+  border-radius:25%;
   width: auto;
   object-fit: contain;
 }

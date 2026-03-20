@@ -5,6 +5,7 @@ import Card from './Card';
 import { useScroll } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+import { HeroNav } from "../../home/hero/components/HeroNav";
 
 export default function Home() {
   const container = useRef(null);
@@ -26,6 +27,8 @@ export default function Home() {
   }, []);
 
   return (
+    <>
+    <HeroNav />
     <main ref={container} className={styles.main}>
       {projects.map((project, i) => {
         const targetScale = 1 - ((projects.length - i) * 0.05);
@@ -42,5 +45,6 @@ export default function Home() {
         );
       })}
     </main>
+    </>
   );
 }

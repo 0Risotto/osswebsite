@@ -7,7 +7,7 @@ export function HeroNav() {
   const menuItems = [
     { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
     { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
-    { label: 'Blogs', ariaLabel: 'View our services', link: '/services' },
+    { label: 'Blogs', ariaLabel: 'Browse blog posts', link: '/blog' },
     { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
   ];
 
@@ -29,7 +29,7 @@ export function HeroNav() {
         width: "100%",
         height: "100%",
         zIndex: 1000,
-        pointerEvents: "none" // Keep this: allows clicks to pass through the empty areas
+        pointerEvents: "none",
       }}
     >
       <StaggeredMenu
@@ -43,8 +43,7 @@ export function HeroNav() {
         changeMenuColorOnOpen={true}
         colors={['#B19EEF', '#5227FF']}
         accentColor="#8ff0a4"
-        // 1. ADD THIS: A valid image prevents the layout crash
-        logoSrc="/favicon.ico" 
+        logoUrl="/images/icon.jpg"
         onMenuOpen={() => console.log('Menu opened')}
         onMenuClose={() => console.log('Menu closed')}
       />
