@@ -27,10 +27,11 @@ export default async function BlogPage() {
             Blog
           </span>
           <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
-            Articles sourced directly from the `content` folder.
+            Stories, guides, and updates from the OSS community.
           </h1>
           <p className="text-lg leading-8 text-white/70">
-            The site now reads the markdown posts from the repository and turns them into first-class pages.
+            Explore articles, tutorials, and reflections from our community as we share what we learn, build, and
+            contribute.
           </p>
         </header>
 

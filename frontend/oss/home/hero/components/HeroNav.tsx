@@ -8,13 +8,13 @@ export function HeroNav() {
     { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
     { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
     { label: 'Blogs', ariaLabel: 'Browse blog posts', link: '/blog' },
-    { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
+    { label: 'Contact', ariaLabel: 'Go to the contact page', link: '/contact' }
   ];
 
   const socialItems = [
-    { label: 'Instagram', link: 'https:/instagram.com' },
-    { label: 'GitHub', link: 'https://github.com' },
-    { label: 'LinkedIn', link: 'https://linkedin.com' }
+    { label: 'Instagram', link: 'https://instagram.com/linux.ju/' },
+    { label: 'GitHub', link: 'https://github.com/oss-ju' },
+    { label: 'LinkedIn', link: 'https://www.linkedin.com/company/linux-society-at-ju/' }
   ];
 
   return (
