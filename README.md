@@ -2,7 +2,7 @@
 
 The official website of Open Source Society JU.
 
-[Live Website](https://github.com/0Risotto/osswebsite/issues) | [Report Bug or Request Feature](https://github.com/0Risotto/osswebsite/issues)
+[Live Website](https://opensourcesocietyju.netlify.app/) | [Report Bug or Request Feature](https://github.com/0Risotto/osswebsite/issues)
 
 ---
 
