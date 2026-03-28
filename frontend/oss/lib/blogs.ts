@@ -121,7 +121,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
   );
 
   return posts
-    .filter((post): post is BlogPost => Boolean(post) && !post.draft)
+    .filter((post): post is BlogPost => post !== null && !post.draft)
     .sort((a, b) => {
       if (!a.date || !b.date) {
         return a.title.localeCompare(b.title);
