@@ -43,7 +43,7 @@ export function HeroNav() {
         changeMenuColorOnOpen={true}
         colors={["#B19EEF", "#5227FF"]}
         accentColor="#8ff0a4"
-        logoUrl="/images/icon.jpg"
+        logoUrl="/images/icon.png"
         onMenuOpen={() => console.log("Menu opened")}
         onMenuClose={() => console.log("Menu closed")}
       />

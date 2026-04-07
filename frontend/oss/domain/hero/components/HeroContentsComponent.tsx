@@ -1,3 +1,4 @@
+// components/ClientHero.tsx
 "use client";
 
 import { useState } from "react";
@@ -5,17 +6,24 @@ import { motion } from "framer-motion";
 import TextType from "@/components/text/TextType";
 import BlurText from "@/components/text/BlurText";
 import CountUp from "@/components/text/CountUp";
-import { TYPING_TEXT, STATS } from "../constants";
 
-export function HeroContent() {
+type Stat = {
+  value: string;
+  label: string;
+};
+
+interface HeroContentProps {
+  stats: Stat[];
+  typingText: string[];
+}
+
+export default function HeroContent({ stats, typingText }: HeroContentProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (
     <>
-      {/* Main Hero Content */}
       <div className="absolute inset-0 z-0 flex items-center justify-center text-center text-white select-none px-4">
         <div className="w-full max-w-5xl">
-          {/* Main Title */}
           <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8">
             <div className="flex justify-center">
               <BlurText
@@ -32,7 +40,7 @@ export function HeroContent() {
           {loaded && (
             <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-12">
               <TextType
-                text={TYPING_TEXT}
+                text={typingText}
                 typingSpeed={100}
                 pauseDuration={2500}
                 cursorCharacter="_"
@@ -53,7 +61,7 @@ export function HeroContent() {
           animate={{ opacity: 0.9, y: 0 }}
           transition={{ delay: 3.0 }}
         >
-          {STATS.map((stat, index) => (
+          {stats.map((stat, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.03 }}
@@ -61,8 +69,7 @@ export function HeroContent() {
               className="text-center p-2 sm:p-4 md:p-5"
             >
               <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1">
-                {stat.label === "Projects" ||
-                  stat.label === "Active Members" ? (
+                {stat.label === "Active Members" || stat.label === "Blogs" ? (
                   <CountUp
                     from={0}
                     to={Number(stat.value)}

@@ -145,3 +145,23 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
   return post;
 }
+
+export async function getBlogPostsCount(): Promise<number> {
+  const entries = await fs.readdir(postsRoot, { withFileTypes: true });
+  
+  const postChecks = await Promise.all(
+    entries
+      .filter((entry: Dirent) => entry.isDirectory() && !entry.name.startsWith("_"))
+      .map(async (entry: Dirent) => {
+        const filePath = path.join(postsRoot, entry.name, "index.en.md");
+        try {
+          const content = await fs.readFile(filePath, "utf8");
+          return !content.includes("draft: true");
+        } catch {
+          return false;
+        }
+      })
+  );
+  
+  return postChecks.filter(Boolean).length;
+}

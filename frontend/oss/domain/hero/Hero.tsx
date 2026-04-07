@@ -1,9 +1,12 @@
 import { HeroBackground } from "./components/HeroBackground";
-import { HeroContent } from "./components/HeroContents";
+import HeroContentClient from "./components/HeroContentClient";
 import { HeroNav } from "./components/HeroNav";
+import { TYPING_TEXT } from "./constants";
+import { getStats } from "./services/herocontent.services";
 
 export function Hero() {
   return (
+
     <div
       style={{
         height: "100vh",
@@ -13,7 +16,7 @@ export function Hero() {
     >
       <HeroBackground />
       <HeroNav />
-      <HeroContent />
+      <HeroContentClient/>;
     </div>
   );
 }

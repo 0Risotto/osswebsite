@@ -1,1 +1,1 @@
-export type { BlogPost } from '@/lib/blogs';
+export type { BlogPost } from '@/domain/blogs/services/blogs.services';

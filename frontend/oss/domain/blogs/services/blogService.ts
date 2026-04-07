@@ -2,7 +2,7 @@ import {
   getAllPosts as getAllPostsLib,
   getPostBySlug as getPostBySlugLib,
   getPostSlugs as getPostSlugsLib,
-} from '@/lib/blogs';
+} from '@/domain/blogs/services/blogs.services';
 
 export const getAllPosts = getAllPostsLib;
 export const getPostBySlug = getPostBySlugLib;

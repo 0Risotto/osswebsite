@@ -1,3 +1,4 @@
+// constants.ts
 export const NAV_ITEMS = [
   { label: "About", href: "#about" },
   { label: "Our Story", href: "#story" },
@@ -24,11 +25,4 @@ export const TYPING_TEXT = [
   "Open Tools",
   "Open Projects",
   "Open Licenses",
-];
-
-export const STATS = [
-  { value: "100", label: "Active Members" },
-  { value: "550", label: "Projects" },
-  { value: "24/7", label: "Community Support" },
-  { value: "Open", label: "Source Everything" },
 ];
