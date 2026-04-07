@@ -79,7 +79,7 @@ async function resolveCoverImage(slug: string) {
   for (const fileName of coverCandidates) {
     try {
       await fs.access(path.join(postsRoot, slug, fileName));
-      return `/blog-assets/${slug}/${fileName}`;
+      return `/content/content/posts/${slug}/${fileName}`;
     } catch {}
   }
 
