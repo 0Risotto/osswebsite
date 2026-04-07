@@ -15,7 +15,7 @@ export type BlogPost = {
   coverImage: string | null;
 };
 
-const postsRoot = path.join(process.cwd(), "content", "content", "posts");
+const postsRoot = path.join(process.cwd(), "public", "content", "posts");
 const coverCandidates = [
   "cover.png",
   "cover.jpg",
@@ -79,7 +79,8 @@ async function resolveCoverImage(slug: string) {
   for (const fileName of coverCandidates) {
     try {
       await fs.access(path.join(postsRoot, slug, fileName));
-      return `/content/content/posts/${slug}/${fileName}`;
+      // Return URL path from public folder (no leading ./)
+      return `/content/posts/${slug}/${fileName}`;
     } catch {}
   }
 
@@ -119,7 +120,6 @@ export async function getAllPosts(): Promise<BlogPost[]> {
       .filter((entry: Dirent) => entry.isDirectory() && !entry.name.startsWith("_"))
       .map((entry: Dirent) => readPost(entry.name)),
   );
-
   return posts
     .filter((post): post is BlogPost => post !== null && !post.draft)
     .sort((a, b) => {
